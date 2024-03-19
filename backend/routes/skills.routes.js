@@ -6,6 +6,7 @@ import { ObjectId } from "mongodb";
 
 const router = Router();
 const SKILLS_COLLECTION = db.collection('Skills');
+
 // ENDPOINT FOR GETTING LIST OF SKILLS
 router.get('/', async(req, res) =>{
     let result = await SKILLS_COLLECTION.find({}).toArray();
@@ -24,7 +25,7 @@ router.get('/:id', async(req, res) =>{
 // ENPOINT FOR ADD/POSTING A SINGLE SKILLS
 router.post('/', async(req, res) =>{
     try{
-        let newSkills ={
+        let newSkills = {
             skill: req.body.skill,
             proficiency:req.body.proficiency
         }

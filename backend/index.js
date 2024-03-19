@@ -14,6 +14,7 @@ app.use(bodyParser.urlencoded({extended: false}))
 
 // load routes
 app.use('/skills', skills)
+
 // start server
 app.listen( PORT, () => {
     console.log(`Server is running:${PORT}`)
